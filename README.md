@@ -22,6 +22,8 @@ Board representation, training data, model architecture, and evaluation methods 
 
 ChessGPT is in its early research and development stage. Its architecture and methods are evolving, and the objectives above represent research goals rather than completed capabilities.
 
+**Active development takes place in the [`develop`](https://github.com/Roboticela/ChessGPT/tree/develop)[ branch](https://github.com/Roboticela/ChessGPT/tree/develop).** Visit it to explore ongoing work, experiments, and the latest development progress. Content in this branch may be incomplete or subject to change.
+
 ## 🔬 Research Philosophy
 
 The project prioritizes experimentation, measurable progress, and learning from failure. Ideas will be tested rather than assumed to work, and conclusions will be guided by results.
@@ -29,7 +31,3 @@ The project prioritizes experimentation, measurable progress, and learning from 
 ## 📌 Long-Term Vision
 
 Develop a chess-playing model that learns to interpret positions and make decisions through its own learned representations, with the long-term ambition of achieving strong play and meaningful explanations of its decisions.
-
----
-
-*ChessGPT is an independent experimental research project. Its name does not imply an affiliation with OpenAI.*
