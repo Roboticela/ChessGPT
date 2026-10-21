@@ -1,0 +1,168 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #101416;
+  --bg-2: #151b1e;
+  --line: #273134;
+  --line-2: #364246;
+  --text: #e8ebe9;
+  --muted: #9eabaa;
+  --teal: #46d3c2;
+  --teal-d: #2b8f84;
+  --teal-ink: #05201d;
+  --font-serif: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg);
+  color: var(--text);
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  overflow-x: hidden;
+}
+
+section {
+  scroll-margin-top: 72px;
+}
+
+:focus-visible {
+  outline: 2px solid var(--teal);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* SVG Hero Graphic Styles & Animations */
+.hero-svg .slab {
+  fill: #0b0f10;
+  stroke: #364246;
+  stroke-width: 1;
+}
+
+.hero-svg .sq-l {
+  fill: #2b3639;
+}
+
+.hero-svg .sq-d {
+  fill: #1a2124;
+}
+
+.hero-svg .sq-h {
+  fill: rgba(70, 211, 194, 0.42);
+  stroke: #46d3c2;
+  stroke-width: 1.2;
+  opacity: 0;
+  animation: chessFade 0.6s ease forwards;
+}
+
+.hero-svg .coord {
+  font-family: var(--font-geist-mono, ui-monospace, SFMono-Regular, Menlo, monospace);
+  font-size: 10px;
+  fill: #7d8b8a;
+}
+
+.hero-svg .piece {
+  font-size: 28px;
+  font-family: "Segoe UI Symbol", "Noto Sans Symbols 2", "Apple Symbols", sans-serif;
+}
+
+.hero-svg .piece-w {
+  fill: #f4f6f5;
+}
+
+.hero-svg .piece-b {
+  fill: #05201d;
+}
+
+.hero-svg .plane {
+  fill: rgba(70, 211, 194, 0.045);
+  stroke: rgba(70, 211, 194, 0.4);
+  stroke-width: 1;
+}
+
+.hero-svg .lattice {
+  stroke: rgba(70, 211, 194, 0.16);
+  stroke-width: 1;
+}
+
+.hero-svg .edge {
+  fill: none;
+  stroke: rgba(70, 211, 194, 0.62);
+  stroke-width: 1;
+}
+
+.hero-svg .edge-out {
+  stroke: rgba(232, 235, 233, 0.38);
+}
+
+.hero-svg .draw {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  animation: chessDraw 1.3s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.hero-svg .node {
+  fill: #101416;
+  stroke: rgba(70, 211, 194, 0.55);
+  stroke-width: 1;
+}
+
+.hero-svg .node.on {
+  fill: #46d3c2;
+  stroke: #46d3c2;
+}
+
+.hero-svg .node.out {
+  fill: #e8ebe9;
+  stroke: #e8ebe9;
+}
+
+.hero-svg .node-ring {
+  fill: none;
+  stroke: rgba(70, 211, 194, 0.45);
+  stroke-width: 1;
+}
+
+.hero-svg .tag line {
+  stroke: #364246;
+  stroke-width: 1;
+}
+
+.hero-svg .tag text {
+  font-family: var(--font-geist-mono, ui-monospace, SFMono-Regular, Menlo, monospace);
+  font-size: 11px;
+  fill: #9eabaa;
+}
+
+@keyframes chessDraw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes chessFade {
+  to {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  * {
+    transition: none !important;
+  }
+  .hero-svg .draw {
+    animation: none;
+    stroke-dashoffset: 0;
+  }
+  .hero-svg .sq-h {
+    animation: none;
+    opacity: 1;
+  }
+}

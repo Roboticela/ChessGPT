@@ -1,0 +1,49 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+node_modules/
+/Website/node_modules/
+/chessgpt/node_modules/
+/Website/.pnp
+/Website/.pnp.*
+/Website/.yarn/*
+/Website/.yarn/patches
+/Website/.yarn/plugins
+/Website/.yarn/releases
+/Website/.yarn/versions
+
+# testing
+/Website/coverage
+/chessgpt/coverage
+
+# next.js
+.next/
+/Website/.next/
+/chessgpt/.next/
+/Website/out/
+/chessgpt/out/
+
+# production
+/Website/build
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+/Website/npm-debug.log*
+/Website/yarn-debug.log*
+/Website/yarn-error.log*
+/Website/.pnpm-debug.log*
+
+# env files (can opt-in for committing if needed)
+/Website/.env*
+
+# vercel
+/Website/.vercel
+
+# typescript
+/Website/*.tsbuildinfo
+/Website/next-env.d.ts
+
+.vscode/
